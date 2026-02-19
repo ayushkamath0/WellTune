@@ -1,15 +1,15 @@
-
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>WellTune app UI design</title>
-    </head>
-
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+/**
+ * PostCSS Configuration
+ *
+ * Tailwind CSS v4 (via @tailwindcss/vite) automatically sets up all required
+ * PostCSS plugins — you do NOT need to include `tailwindcss` or `autoprefixer` here.
+ *
+ * This file only exists for adding additional PostCSS plugins, if needed.
+ * For example:
+ *
+ * import postcssNested from 'postcss-nested'
+ * export default { plugins: [postcssNested()] }
+ *
+ * Otherwise, you can leave this file empty.
+ */
+export default {}
