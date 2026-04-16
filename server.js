@@ -60,6 +60,8 @@ app.post("/api/auth/signup", async (req, res) => {
   const { username, email, password } = req.body;
   if (!username || !email || !password)
     return res.status(400).json({ error: "All fields required" });
+  if (password.length < 8)
+    return res.status(400).json({ error: "Password must be at least 8 characters long" });
   try {
     const hash = await bcrypt.hash(password, 10);
     const [result] = await pool.execute(
