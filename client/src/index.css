@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 @layer base {
   html {
@@ -18,5 +19,83 @@
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(6px); }
     to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@keyframes wtCardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes wtLogoFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes wtFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wt-card-enter {
+  animation: wtCardEnter 0.8s ease;
+}
+
+.wt-logo-float {
+  animation: wtLogoFloat 2.5s ease-in-out infinite;
+}
+
+.wt-fade-up-1 {
+  opacity: 0;
+  animation: wtFadeUp 0.6s ease forwards;
+  animation-delay: 0.12s;
+}
+
+.wt-fade-up-2 {
+  opacity: 0;
+  animation: wtFadeUp 0.6s ease forwards;
+  animation-delay: 0.22s;
+}
+
+.wt-fade-up-3 {
+  opacity: 0;
+  animation: wtFadeUp 0.6s ease forwards;
+  animation-delay: 0.32s;
+}
+
+.wt-fade-up-4 {
+  opacity: 0;
+  animation: wtFadeUp 0.6s ease forwards;
+  animation-delay: 0.42s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wt-card-enter,
+  .wt-logo-float,
+  .wt-fade-up-1,
+  .wt-fade-up-2,
+  .wt-fade-up-3,
+  .wt-fade-up-4 {
+    animation: none;
+    opacity: 1;
   }
 }
